@@ -21,6 +21,8 @@ while is_game_on:
     answer_state = screen.textinput(title=f"{len(correct_guesses)}/50 Guess the State", prompt="What's another state's name?").title()
     # state_title = answer_state.title()
 
+    if answer_state == "Exit":
+        break
     if answer_state in all_states:
         new_state = turtle.Turtle()
         new_state.hideturtle()
@@ -33,4 +35,5 @@ while is_game_on:
         score += 1
     else:
         is_game_on = False
+
 
