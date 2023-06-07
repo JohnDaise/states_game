@@ -18,7 +18,7 @@ correct_guesses = []
 score = 0
 is_game_on = True
 while is_game_on:
-    answer_state = screen.textinput(title="Guess the State", prompt="What's another state's name?").title()
+    answer_state = screen.textinput(title=f"{len(correct_guesses)}/50 Guess the State", prompt="What's another state's name?").title()
     # state_title = answer_state.title()
 
     if answer_state in all_states:
